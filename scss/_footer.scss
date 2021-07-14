@@ -1,0 +1,170 @@
+
+// FOOTER SECTION
+
+.footer-cont {
+  background: $fortism-dark-blue;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: $white;
+
+  h4 {
+    display: none;
+  }
+
+  h3 {
+    padding-top: 20px;
+    color: $white;
+    font-size: 1em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 3px 0;
+    list-style: none;
+  }
+  .fa {
+    padding-left: 3px ;
+  }
+
+  .logo-img {
+    display: block;
+    max-width: 50%;
+    padding-bottom: 10px;
+  }
+
+  .we-do > p {
+    font-size: .9em;
+    padding-right: 40px;
+    line-height: 1.6em;
+  }
+
+  .services-foot {
+  padding-left: 60px;
+    ul {
+    padding: 0;
+    list-style: none;
+  }
+
+
+  .social {
+  padding-left: 60px;
+}
+
+  .subscribe {
+    margin-left: 30px;
+  }
+}
+  .mc-field-group {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  button {
+    &[type='submit'] {
+      background-color: $fortism-light-blue;
+      border: 0;
+      border-radius: 0;
+      height: 28px;
+      margin: 3px 2px 2px;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: $ease;
+      width: 28px;
+    }
+
+    &[type='submit']:hover,
+    &[type='submit']:focus {
+      background-color: $fortism-dark-blue;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: $ease;
+    }
+  }
+}
+
+.footer-bottom {
+  background: $fortism-foot-dark-blue;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  p {
+    color: $white;
+    font-size: .7em;
+    // font-weight: 300;
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: 1em;
+    color: $white;
+    text-decoration: none;
+    transition: $ease;
+
+    &:hover,
+    &:focus {
+      color: $fortism-light-blue;
+    }
+  }
+}
+
+
+ /*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .logo-img {
+    margin: 0 auto;
+    }
+  .textwidget p {
+    text-align: center;
+  }
+    .footer-cont .subscribe {
+    margin: 0;
+    padding: 0 100px;
+  }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .footer-cont .subscribe {
+    padding: 0 25px;
+  }
+    .social {
+  padding-left: 60px;
+}
+img.custom-logo {
+    padding-left: 15px;
+}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
+
+

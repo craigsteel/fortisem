@@ -1,0 +1,95 @@
+
+
+// SOCIAL SHAREING ICONS
+
+.crunchify-whatsapp {
+  display: none;
+}
+
+.crunchify-link {
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 2px;
+  padding: 2px 8px 4px;
+  text-decoration: none;
+  width: 40px;
+  transition: $ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+
+.crunchify-twitter {
+  background: $twitter;
+  transition: $ease;
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($twitter, 10%);
+  }
+}
+
+.crunchify-facebook {
+  background: $facebook;
+  transition: $ease;
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($facebook, 10%);
+  }
+}
+
+.crunchify-google-plus {
+  background: $googleplus;
+  transition: $ease;
+  &:hover,
+  &:active,
+  &:focus {    
+    background: darken($googleplus, 10%);
+  }
+}
+
+.crunchify-pinterest {
+  background: $pinterest;
+  transition: $ease;
+  &:hover,
+  &:active,
+  &:focus {    
+    background: darken($pinterest, 10%);
+  }
+}
+
+.crunchify-linkedin {
+  background: $linkedin;
+  transition: $ease;   
+  &:hover,
+  &:active,
+  &:focus {    
+    background: darken($linkedin, 10%);
+  }
+}
+
+.crunchify-social {
+  margin: 20px 0 25px;
+
+  h5 {
+    color: $grey;
+    text-align: left;
+  }
+
+  i {
+    color: $white;
+    font-size: 2em;
+    font-smoothing: antialiased;
+    margin: 30% 20%;
+    }
+}
+

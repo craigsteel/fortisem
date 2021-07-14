@@ -1,0 +1,86 @@
+
+@mixin quote{
+  position: relative;
+  width: 260px;
+  color: #f5f5f5;
+  background-color: $fortism-light-blue;
+  border-color: none;
+  border-radius: 0;
+  outline: none;
+  left: 50%;
+  margin-left: -130px;
+  margin-top: 5%;
+  font-size: 20px;
+  padding: 15px 35px 15px;
+  z-index: 888;
+    transition: $ease;
+  &:hover {
+  background-color: $fortism-dark-blue;
+  }
+}
+  @mixin arrow-round {
+      position: absolute;
+      z-index: 999;
+      background: $fortism-light-blue;
+      width: 35px;
+      height: 35px;
+      padding: 9px 0;
+      border-radius: 100%;
+      color: #FFFFFF;
+      font-size: 16px;
+      top: -17.5px;
+      right: 50%;
+      margin-right: -17.5px;
+    }
+
+  @mixin more {
+      text-align: center;
+      a {
+      text-decoration: none;
+      }
+  }
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #080d15;
+  opacity: .3;
+}
+
+@mixin read-more-btn {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 50%;
+  background: rgba($fortism-light-blue, 1);
+  height: 10%;
+  z-index: 777;
+  text-align: center;
+  padding-top: 10px;
+  transition: $ease;
+  text-decoration: none;
+  margin-left: 25%;
+  color: $white;
+    &:hover {
+    background: rgba($fortism-dark-blue, 1);
+  }
+}
+
+@mixin shadow {
+  box-shadow: -0px -30px 20px -30px rgba(0, 0, 0, 0.08), -10px 30px 15px -30px rgba(0, 0, 0, 0.08);
+  }
+
+
+@mixin hover-shadow {
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear 0s;
+    &:hover {
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+

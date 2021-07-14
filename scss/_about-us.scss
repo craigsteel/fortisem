@@ -1,0 +1,81 @@
+.about-us {
+background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/our-mission-bg.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+	p {
+	color: $grey;
+	margin-bottom: 40px;
+	}
+	h2 {
+	text-transform: uppercase;
+	}
+	h5 {
+	font-weight: 700;
+	font-size: 1.1em;
+	}
+}
+
+// MANAGEMENT SECTION //
+
+.management,
+.main-text {
+	background-color: $light-blue;
+		h2 {
+		text-transform: uppercase;
+		}
+		h5 {
+		padding: 0 20%;
+	    font-weight: 700;
+	    font-size: 1.1em;
+	    margin-bottom: 30px;
+		}
+	    h3 {
+	    text-align: left;
+	    margin-left: 0;
+	    margin-top: 0;
+	    }
+}
+
+.insurance {
+	background-color: $fortism-light-blue;
+	padding: 10px;
+	color: $white;
+	h3 {
+	font-size: 1.5em;
+	color: $white;
+	text-transform: uppercase;
+	}
+	ul {
+	font-size: 1.2em;
+	list-style: none;
+	}
+}
+
+.certificates {
+	img {
+	display: block;
+    margin: auto;
+    max-width: 100%;
+	}
+}
+
+
+// RELATIONSHIPS SECTION //
+.relationships {
+	margin-top: 20px;
+	p {
+		text-align: center;
+		color: $fortism-light-blue;
+	}
+}
+
+.rel-qoutes {
+	h6 {
+		font-size: 24px;
+		font-style: italic;
+		color: $grey;
+		padding: 0 100px;
+	}
+}
+

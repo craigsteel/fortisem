@@ -1,0 +1,163 @@
+.navbar-right {
+  margin-top: 30px;
+  text-transform: uppercase;
+  a {
+	  color: $grey;
+    transition: $ease;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	font-weight: 700;
+}
+
+
+img.custom-logo {
+    max-width: 200px;
+    padding-top: 10px;
+}
+
+
+ul.dropdown-menu {
+  background-color: $fortism-light-blue;
+  border-radius: 0;
+  transition: $ease;
+	  &:hover {
+  	  }
+  	 li>a {
+  	 	color: $white;
+      background-color: $fortism-light-blue;
+  	 	&:hover {
+  	 	color: $white;
+      background-color: $fortism-dark-blue;
+  	  }
+  	 }
+  }
+
+  // Fixing BS dropdown in a dropdown
+.navbar-toggleable-md .navbar-nav .dropdown-menu {
+  float:left;
+}
+
+.dropdown-menu .dropdown-menu {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  border: none;
+  box-shadow: none;
+  li {
+    padding-left: 0px;
+    list-style: square;
+  }
+}
+
+.dropdown-menu .menu-item {
+  width: 100%;
+  padding: 5px 5px;
+  a.nav-link{
+    margin:0px;
+    padding:$nav-link-padding;
+    color: $fortism-light-blue;
+  }
+  a.nav-link:hover { 
+    background-color: $brand-primary; 
+  }
+}
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $white;
+
+}
+}
+
+.navbar-toggle {
+  border: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $fortism-light-blue;
+}
+
+button.navbar-toggle {
+    margin-top: 25px!important;
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 410px;
+}
+
+
+// POST NAVIGATION //
+.post-nav,
+.nav-links {
+  margin: 20px 0;
+}
+  .post-next,
+  .nav-next {
+  text-align: right;
+  text-transform: uppercase;
+      transition: $ease;
+  a {
+  color: $grey;
+  font-size: .8em;
+  text-decoration: none;
+  }
+}
+
+  .post-previous,
+  .nav-previous {
+  text-align: left;
+  text-transform: uppercase;
+      transition: $ease;
+  a {
+  color: $grey;
+  font-size: .8em;
+  text-decoration: none;
+  }
+}
+
+// CATEGORIES //
+
+.categories {
+  margin-top: 20px;
+
+  h4 {
+      color: $grey;
+      text-align: center;
+      text-transform: uppercase;
+
+  }
+  
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+  }
+
+  li {
+    border-radius: 30px;
+    display: inline-block;
+    margin: .2em;
+    padding: .5em 0;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $grey;
+    display: block;
+    font-size: 1.3em;
+    font-weight: 300;
+    position: relative;
+    top: 0;
+    text-decoration: none;
+        transition: $ease;
+    &:hover {
+    color: $fortism-light-blue;
+    }
+  }
+}
+
+

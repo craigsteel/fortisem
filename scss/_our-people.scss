@@ -1,0 +1,129 @@
+// people-cards //
+
+.our-people {
+  position: relative;
+  display: block;
+	margin-top: 30px;
+  padding: 5%;
+
+.post-module {
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  height: auto;
+  transition: $ease;
+  @include shadow;
+  
+.thumbnail-head {
+    position: relative;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    img {
+      margin-left: 0;
+      display: block;
+      width: 100%;
+      transition: all 0.3s linear 0s;
+    }
+  }
+
+      .name {
+      position: absolute;
+      background: rgba($fortism-light-blue, .8);
+      width: 100%;
+      z-index: 444;
+      height: 70px;
+      bottom: 0px!important;
+      h1 {
+      margin: 0;
+      color: $white;
+      padding: 6px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      }
+      h2 {
+      margin: 0;
+      color: $white;
+      padding: 4px 0;
+      font-size: 10px;
+      padding-top: 0px;
+      text-transform: uppercase;
+      text-align: center;
+      }
+      .arrow {
+      position: absolute;
+      left: 50%;
+      margin-left: -3px;
+      font-size: 14px;
+      color: #fff;
+      padding: 0;
+      }
+    }
+  }
+
+  }
+  .our-people-btn {
+    position: relative;
+    width: 100%;
+    padding: 7px 0;
+    background: rgba($fortism-light-blue, 1);
+    transition: $ease;
+    text-align: center;
+      a {
+      color: $white;
+      transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      text-decoration: none; 
+    }
+      &:hover {
+        background: rgba($fortism-dark-blue, 1);
+    }
+  }
+  
+// SINGLE people-page //
+
+.individual,
+.our-people {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding-top: 20px;  
+  transition: $ease;
+  @include shadow;
+  p {
+  	padding-right: 40px;
+  	color: $grey;
+  	padding-bottom: 30px;
+    line-height: 1.5em;
+    }
+  h4 {
+  	text-align: left;
+  	text-transform: uppercase;
+  	padding-top: 40px;
+    }
+    h5 {
+  	text-align: left;
+  	text-transform: uppercase;
+    }
+.image-cv {
+  overflow: hidden;
+  margin-top: 20px;
+}
+ .img-responsive {
+  	width: 100%;
+  	// margin-left: 30px;
+  }
+    
+   .arrow-round {
+    @include arrow-round;
+      top: -14.5px;
+        .fa {
+        font-size: 20px;
+        color: #fff;
+        padding: 0 9px;
+      
+      }  }   
+	}

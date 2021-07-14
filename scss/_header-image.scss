@@ -1,0 +1,49 @@
+ .feature-image {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 410px!important;
+  z-index: -10;
+  overflow: hidden;
+
+
+  .overlay {
+    @include overlay;
+    z-index: 0;
+  }
+  
+.page-title,
+.page-title-category,
+.container-fluid {
+
+    position: relative;
+    padding-top: 100px;
+    z-index: 999;
+
+    p, h1 {
+    color: $white;
+    text-transform: uppercase;
+    }
+    h2 {
+    color: $white;
+    // font-size: 25px;
+    }
+    h3 {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    }
+  }
+}
+
+ 
+
+
+
+
+
+
+
+
+

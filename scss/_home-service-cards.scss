@@ -1,0 +1,211 @@
+
+.service-cards {
+  position: absolute;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: -215px;
+  width: 90%;
+  padding: 15px 15px;
+  background-color: rgba(255, 255, 255, .2);
+  z-index: 111;
+}
+
+.post-module:hover .thumbnail img, .hover .thumbnail img {
+  transform: scale(1.1);
+  opacity: .6;
+}
+
+.post-module {
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  margin-bottom: 15px;
+  height: 325px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s linear 0s;
+  &:hover {
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+  }
+  .thumbnail {
+    height:200px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    .arrow-round {
+      @include arrow-round;
+            padding: 9px 9px;
+      top: 140px;
+      .arrow {
+        font-size: 13px;
+        color: #fff;
+        padding: 0 11px;
+      }
+    }
+    img {
+      display: block;
+      max-width: 120%;
+      transition: all 0.3s linear 0s;
+    }
+      .sub_title, 
+      .title {
+      position: absolute;
+      width: 100%;
+      z-index: 444;
+      margin: 0;
+      top: 10px;
+      h1 {
+      color: $white;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-right: 5px;
+      margin-left: 5px;
+      }
+      h2 {
+      color: $white;
+      font-size: 20px;
+      padding-top: 80px;
+      }
+    }
+
+}
+  .post-content {
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0, .5);
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    z-index: 0;
+  }
+    .description {
+      display: block;
+      color: #fff;
+      font-size: 13px;
+      text-align: center;
+      padding: 10px 20px;
+    }
+      .category {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba($fortism-light-blue, 1);
+      height: 125px;
+      z-index: -1;
+    }
+      .services-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      background: rgba($fortism-dark-blue, 1);
+      height: 15%;
+      z-index: 1;
+      text-align: center;
+      padding-top: 10px;
+      transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      text-decoration: none;  
+      &:hover {
+      background: rgba($fortism-dark-blue, .6);
+    }
+  }
+    .post-meta {
+      display: none;
+      margin: 0px 0px 10px;
+      color: #999999;
+      .timestamp {
+        margin: 0 16px 0 0;
+      }
+      a {
+        color: #999999;
+        text-decoration: none;
+      }
+    }
+  }
+  
+.hover .post-content .description {
+  display: block !important;
+  height: auto !important;
+  opacity: 1 !important;
+}
+
+.container {
+  .column {
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    .demo-title {
+      margin: 0 0 15px;
+      color: #666666;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .info {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    h1 {
+      margin: 0 0 15px;
+      padding: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+    }
+    span {
+      color: #666666;
+      font-size: 12px;
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .fa {
+        color: #f2b202;
+      }
+    }
+  }
+}
+
+
+     /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+//       .service-cards {
+//   position: relative;
+// }
+// .post-module .thumbnail img {
+//     display: block;
+//     width: 100%;
+//     }
+  }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+      .service-cards {
+  position: relative;
+}
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }

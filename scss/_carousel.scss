@@ -1,0 +1,232 @@
+.fade-carousel {
+  position: relative;
+  height: 100vh;
+  // background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/Fortisem-main-slider-large_2.jpg');
+  background-size: cover;
+  background-position: center center;
+  // background: rgba($fortism-light-blue, 0.1);
+}
+
+        .carousel-inner>.item>img, 
+.carousel-inner>.item>a>img {
+  height: auto;
+}  
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+   left: 0 !important;
+      -webkit-transition: opacity .8s; /*adjust timing here */
+         -moz-transition: opacity .8s;
+           -o-transition: opacity .8s;
+              transition: opacity .8s;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  // display: none;
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+  display: none;
+
+  /*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+}
+
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+    display: none;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+
+.slide-caption {
+  position: relative;
+  margin-right: 20%;
+  z-index: 668;
+  color: $white;
+  background-color: rgba($background-color-jum, .6);
+  padding: 5px 30px;
+  h5 {
+    text-transform: none;
+    text-align: left;
+    color: $white;
+    font-size: .9em;
+    line-height: 1.6em;    
+  }
+}
+
+.hero {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 666;
+  color: #fff;
+  width: 96%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+  transform: translate3d(-50%,-50%,0);
+    a {
+    text-decoration: none;
+  }
+}
+
+.hero h1 {
+  font-size: 3em;    
+  margin: 0;
+  padding: 0px 90px;
+  color: #fff;
+}
+
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: #080d15;
+    opacity: .3;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+
+.btn.btn-quote {
+  @include quote;
+  }
+i.arrow-round {
+  @include arrow-round;
+}  
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+// .fade-carousel .slides, 
+// .fade-carousel .slides {
+// // .fade-carousel .slides .slide-3 {
+//   position: relative;
+//   // height: 100vh;
+//   background-size: cover;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//     background: rgba($fortism-light-blue, 0.1);
+// }
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .carousel-inner>.item>img, 
+  .carousel-inner>.item>a>img {
+    height: 100%;
+  }  
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+  .hero {
+    top: 40%;
+  }
+ .hero h1 {
+    font-size: 2.3em;  
+    padding: 30px 25px;  
+  }
+  .slide-caption {
+    display: none;
+  }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+ 
+}

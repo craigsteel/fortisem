@@ -1,0 +1,166 @@
+.contact {
+
+      .info-block {
+      position: relative;
+      background-color: rgba($fortism-light-blue, .1);
+      margin-top: 60px;
+      padding: 10px;
+      height: 190px;
+
+        .arrow-round {
+          @include arrow-round;
+          top: -14px;
+            .fa {
+            font-size: 20px;
+            color: #fff;
+            padding: 0 7px;
+            }  
+          }
+          h4 {
+          padding-top: 20px;
+          text-align: center;
+          }
+
+          address {
+          color: $grey;
+          }
+  }
+
+  .info-block-map {
+    position: relative;
+    background-color: rgba($fortism-light-blue, .1);
+    margin-top: 60px;
+    padding: 0;
+    margin-left: 0;
+    height: 190px;
+    overflow: hidden;
+    }
+      img {
+      width: 100%
+      }
+}
+
+
+  // CONTACT FORM SECTION 
+
+.contact-head {
+  h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+       
+
+.contact-form {
+  position: relative;
+  background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/request-quote-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0;
+  }
+
+// FORMS
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 0;
+    border-radius: 0;
+    color: $fortism-light-blue;
+    font-size: 14px;
+
+  }
+
+input {
+  &[type='text'],
+  &[type='email'],
+  &[type='url'],
+  &[type='password'],
+  &[type='search'] {
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: $fortism-light-blue;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 6px 12px;
+    width: 100%;
+  }
+
+  &[type='submit'] {
+    background-color: $fortism-light-blue;
+    border: 0;
+    border-radius: 0;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 1.33;
+    margin: 10px 10px;
+    padding: 0 25px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: $ease;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &[type='submit']:hover,
+  &[type='submit']:focus {
+    background-color: $fortism-dark-blue;
+    border: 0;
+    color: $white;
+    outline: none;
+    transition: $ease;
+    }
+  }
+
+textarea {
+  &[name='project-description'] {
+    border: 1px solid $grey;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $grey;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    width: 100%;
+  }
+}
+
+div.wpcf7-response-output {
+  width: 360px;
+  text-align: center;
+  position: absolute;
+  margin-bottom: 0px;
+  bottom: 25px; 
+  margin-right: -180px;
+  right: 50%;
+  color: $white;
+  border-color: $fortism-dark-blue;
+}
+
+.contact-right {
+  margin-top: 20px;
+  text-align: right;
+  }
+
+.ajax-loader {
+  height: 0;
+}
+
+table {
+  background-color: transparent;
+  width: 100%;  
+}
+

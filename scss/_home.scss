@@ -1,0 +1,61 @@
+.mission {
+	padding-top: 10%;
+	padding-bottom: 3%;
+	position: relative;
+	display: block;
+	background: rgba($fortism-light-blue, 0.1);
+	z-index: -1;
+	p {
+	font-size: 1.1em;
+	color: $grey;
+	}
+    img {
+    max-width: 100%;
+    }
+}
+
+.more {
+    @include more;
+}
+
+
+ /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+    .mission {
+        p {
+        text-align: center;
+        }
+    }
+
+    .mission-image {
+        img {
+        padding: 20px 10px;
+        display: block;
+        margin: 0 auto;        
+        }
+    }
+}
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+}
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+        .single .content-area {
+        padding: 20px 20px;
+        }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }

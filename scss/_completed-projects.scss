@@ -1,0 +1,101 @@
+// PROJECT BLOCKS
+
+.completed-projects,
+.projects-page {
+  margin: 30px 0;
+
+  h2 {
+    margin-bottom: 2%;
+  }
+
+  p {
+    padding: 10px 20px;
+    font-size: 17px;
+    display: block;
+    color: $fortism-grey;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .post-module {
+    position: relative;
+    z-index: 1;
+    display: block;
+    border-radius: 0;
+    height: 420px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: $ease;
+    &:hover {
+      box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.2);
+    } 
+
+      .post-module:hover .thumbnail img, .hover .thumbnail img {
+        transform: scale(1.1);
+        opacity: .9;
+      }
+
+      .thumbnail {
+        height: 250px;
+        overflow: hidden;
+        padding: 0;
+        border-radius: 0;
+        border: 0;
+      }
+      .arrow-round {
+        @include arrow-round;
+        top: 55%;
+      }
+      .arrow {
+        font-size: 13px;
+        color: #fff;
+        padding: 0 11px;
+      }
+      img {
+        display: block;
+        width: 120%;
+        transition: $ease
+      }
+
+      .overlay {
+        @include overlay;
+        height: 250px;
+      }
+
+        .entry-meta {
+        display: none;
+      }
+
+      .post-content {
+        position: absolute;
+        top: 0;
+        background: rgba($fortism-grey, 0.1);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        transition: $ease;
+        z-index: 3;
+          h1.title,
+          h2.entry-title {   
+            margin: 90px 10px !important;
+            a {
+            transition: $ease;
+            font-size: 25px;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+              &:hover {
+                transition: $ease;
+                color: $background-color-jum;
+                font-size: 26px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+    a.services-btn {
+    @include read-more-btn;
+    }
+  }
+}
