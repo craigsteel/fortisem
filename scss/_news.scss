@@ -1,57 +1,64 @@
 .news-page {
 	margin-top: 0;
-
 }
-	.news {
+.news {
 	background-color: $fortism-light-grey;
 	margin-top: 20px;
 	margin-bottom: 50px;
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    transition: $ease;
-    &:hover {
+  transition: $ease;
+    
+	&:hover {
     box-shadow: -1px 1px 14px 2px rgba(0,0,0,0.2)
-    }
+  }
 
 	.image {
 	margin: 5px;
 	overflow: hidden;
 	height: 250px;
 	padding: 0;
+		
 		img {
 			height: 100%;
 		}
 	}
+
 	h2.entry-title {
 		font-size: 2em;
 		text-align: left;
 		text-transform: uppercase;
+		
 		a {
-		text-decoration: none;
+			text-decoration: none;
 		}
 	}
 
-		.entry-meta{
+	.entry-meta{
 		padding-bottom: 10px;
+		
 		a {
-		text-decoration: none;
+			text-decoration: none;
 		}
 	}
 				
-		.entry-content {
+	.entry-content {
+
 		p {
-		color: $grey;
-		padding-bottom: 20px;
+			color: $grey;
+			padding-bottom: 20px;
 		}
+
 		a {
-		background: rgba($fortism-light-blue, 1);
-		height: 100px;
-		text-align: center;
-		padding: 10px 30px;
-		transition: $ease;
-		text-decoration: none;
-		color: $white;
-		   &:hover {
-		   background: rgba($fortism-dark-blue, 1);
+			background: rgba($fortism-light-blue, 1);
+			height: 100px;
+			text-align: center;
+			padding: 10px 30px;
+			transition: $ease;
+			text-decoration: none;
+			color: $white;
+		   
+			&:hover {
+		  	background: rgba($fortism-dark-blue, 1);
 		  }
 		}
 	}

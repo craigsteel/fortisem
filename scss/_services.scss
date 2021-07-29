@@ -1,20 +1,23 @@
 .services {
-background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/our-mission-bg.jpg');
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-// background: rgba($fortism-light-blue, 0.07);
+	background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/our-mission-bg.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
 	h2 {
-	text-transform: uppercase;
+		text-transform: uppercase;
 	}
+
 	h5 {
-	font-weight: 700;
-	font-size: 1.1em;
+		font-weight: 700;
+		font-size: 1.1em;
 	}
 }
-	.engineering-intro {
+
+.engineering-intro {
+
 	h2 {
-	margin: 30px 0;
+		margin: 30px 0;
 	}
 }
 
@@ -26,6 +29,7 @@ margin-left: -10px;
 .industries-served {
 	margin-top: 90px;
 	text-align: center;
+
 	h3 {
 		font-size: 1.5em;
 		text-align: center;
@@ -33,26 +37,29 @@ margin-left: -10px;
 		padding: 40px 0 10px;
 		margin: 0;
 	}
-		.service-module {
+
+	.service-module {
 		@include hover-shadow;
-	  	background-color: #f3f8fc;
-	  	position: relative;
-	  	z-index: 1;
-	  	border-radius: 0;
-	  	margin-bottom: 30px;
-	  	height: 400px;
-	  	ul {
+		background-color: #f3f8fc;
+		position: relative;
+		z-index: 1;
+		border-radius: 0;
+		margin-bottom: 30px;
+		height: 400px;
+	  	
+		ul {
 	  	list-style: none;
 	  	padding-left: 0;
 	  	color: $grey;
 		}
 	}
-		.icon {
+		
+	.icon {
 		position: absolute;
 		width: 55px;
 		top: -27px;
 		left: 50%;
 		margin-left: -27px;
-		}
 	}
+}
 

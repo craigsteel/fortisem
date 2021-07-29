@@ -19,17 +19,22 @@
     margin: 2.5em;
     z-index: 999;
 
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+      margin: 2.5em 1em;
+    }
+
     h1,
     h2 {
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       color: $white;
       text-transform: uppercase;
-      padding-top: 0;
     }
+
     h3 {
-    color: $white;
-    text-transform: uppercase;
-    text-align: center;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
     }
   }
 }

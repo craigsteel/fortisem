@@ -22,7 +22,7 @@ function imagesFn() {
         imageminJpegRecompress()
       ]
     ))
-    .pipe(dest(DIST_PATH + '/images'));
+    .pipe(dest(DIST_PATH + '/img'));
 }
 
 exports.build = imagesFn;
