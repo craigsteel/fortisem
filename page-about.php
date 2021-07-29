@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FortisEM
+ * @package fortisem
  */
 
  // No direct access, please
@@ -13,7 +13,7 @@
 get_header(); 
 ?>
 
-<?php get_template_part('template-parts/content','featured-image-with-btn-pages'); ?>
+<?php get_template_part('template-parts/content','featured-image-pages'); ?>
 
 <?php get_template_part('template-parts/content','about-us'); ?>
  

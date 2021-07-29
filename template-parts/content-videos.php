@@ -41,7 +41,13 @@ $video_heading = get_field ('video_heading');
 					<div class="col-md-5">
 						<div class="bridge-text">
 							<p><?php the_sub_field('large_video_description'); ?></p>
-							<a href="/videos">SEE ALL VIDEOS ></a>
+							
+							<?php if(is_front_page() ) { 
+								echo '<a href="/videos">SEE ALL VIDEOS ></a>';
+							} else {
+
+							} ?>
+
 						</div><!-- .bridge-text -->
 					</div><!-- .col-md-5 -->
 
@@ -99,7 +105,11 @@ $video_heading = get_field ('video_heading');
 						</div><!-- .video-image-->
 
 							<p><?php the_sub_field('small_video_description'); ?></p>
-							<a href="/videos">SEE ALL VIDEOS ></a>
+							<?php if(is_front_page() ) { 
+								echo '<a href="/videos">SEE ALL VIDEOS ></a>';
+							} else {
+
+							} ?>
 
 						</div>
 
@@ -132,5 +142,7 @@ $video_heading = get_field ('video_heading');
 </section><!-- .section -->
 
 <script> 
-$("#myModal").on('shown.bs.modal', function (e) {alert( "Modal is successfully shown!" );});
+$("#myModal").on('shown.bs.modal', function (e) {
+	alert( "Modal is successfully shown!" );
+});
 </script>

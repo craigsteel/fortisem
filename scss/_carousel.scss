@@ -1,13 +1,13 @@
 .fade-carousel {
   position: relative;
   height: 100vh;
-  // background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/Fortisem-main-slider-large_2.jpg');
+  // background-image: url('http://localhost:8888/wp-content/themes/fortisem/dist/img/fortisem-main-slider-large_2.jpg');
   background-size: cover;
   background-position: center center;
   // background: rgba($fortism-light-blue, 0.1);
 }
 
-        .carousel-inner>.item>img, 
+.carousel-inner>.item>img, 
 .carousel-inner>.item>a>img {
   height: auto;
 }  
@@ -92,17 +92,16 @@
 
 .slide-caption {
   position: relative;
-  margin-right: 20%;
+  margin-right: 2em;
   z-index: 668;
   color: $white;
   background-color: rgba($background-color-jum, .6);
-  padding: 5px 30px;
+  padding: 5px 20px;
   h5 {
+    @include font-size(15px, 22px, 0);
     text-transform: none;
     text-align: left;
-    color: $white;
-    font-size: .9em;
-    line-height: 1.6em;    
+    color: $white; 
   }
 }
 
@@ -122,11 +121,13 @@
 }
 
 .hero h1 {
-  font-size: 3em;    
+  @include font-size(47px, 50px, 1px);
   margin: 0;
-  padding: 0px 90px;
+  padding: 0px 40px;
   color: #fff;
+  font-weight: 800;
 }
+
 
 
 .fade-carousel .carousel-inner .item .hero {
@@ -218,8 +219,8 @@ i.arrow-round {
     top: 40%;
   }
  .hero h1 {
-    font-size: 2.3em;  
-    padding: 30px 25px;  
+    @include font-size(40px, 50px, 1px); 
+    padding: 35px 15px;  
   }
   .slide-caption {
     display: none;

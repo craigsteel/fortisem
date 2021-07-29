@@ -1,1 +1,1 @@
-# WordPress FortisEM Theme
+# WordPress fortisem Theme

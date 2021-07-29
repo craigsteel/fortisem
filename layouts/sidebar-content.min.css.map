@@ -1,0 +1,8 @@
+{
+    "version": 3,
+    "sources": [
+        "sidebar-content.css"
+    ],
+    "names": [],
+    "mappings": "AAQA,cACC,MAAO,MACP,OAAQ,EAAE,EAAE,EAAE,KACd,MAAO,KAER,WACC,OAAQ,EAAE,EAAE,EAAE,IAEf,2BACC,MAAO,KACP,SAAU,OACV,MAAO,IAER,aACC,MAAO,KACP,MAAO"
+}

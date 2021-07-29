@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FortisEM
+ * @package fortisem
  */
 
  // No direct access, please
@@ -19,7 +19,6 @@ get_header();
 
 		<?php
 		if ( have_posts() ) : ?>
-
 <div class="projects-page">
 <div class="container">
 	<div class="row">

@@ -2,7 +2,7 @@
 /**
  * The template for displaying featured image pages.
  *
- * @package FortisEM
+ * @package fortisem
  */
  // No direct access, please
  if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

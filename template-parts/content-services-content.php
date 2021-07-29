@@ -17,7 +17,6 @@ $equipment_title = get_field ('equipment_title');
 $equipment_list = get_field ('equipment_list');
 $service_pdf_image_download = get_field ('service_pdf_image_download');
 
-
 ?>
 
 

@@ -2,7 +2,7 @@
 /**
  * The template for displaying featured image pages.
  *
- * @package FortisEM
+ * @package fortisem
  */
  // No direct access, please
  if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -20,9 +20,8 @@ $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
 	<div class="overlay"></div>
 
-		<div class="page-title">
+		<div class="page-title single">
 			<div class="container">
-			<div class="row"></div>
 				<h2><?php the_title(); ?></h2>
 				<h1><?php echo $main_heading ?></h1>
 			</div>

@@ -1,10 +1,10 @@
 <?php
 /**
- * FortisEM functions and definitions
+ * fortisem functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 if ( ! function_exists( 'fortisem_setup' ) ) :
@@ -25,7 +25,7 @@ function fortisem_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on FortisEM, use a find and replace
+	 * If you're building a theme based on fortisem, use a find and replace
 	 * to change 'fortisem' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'fortisem', get_template_directory() . '/languages' );
@@ -112,50 +112,6 @@ function fortisem_content_width() {
 add_action( 'after_setup_theme', 'fortisem_content_width', 0 );
 
 
-add_action( 'init', 'custom_bootstrap_slider' );
-/**
- * Register a Custom post type for.
- */
-function custom_bootstrap_slider() {
-	$labels = array(
-		'name'               => _x( 'Slider', 'post type general name'),
-		'singular_name'      => _x( 'Slide', 'post type singular name'),
-		'menu_name'          => _x( 'Bootstrap Slider', 'admin menu'),
-		'name_admin_bar'     => _x( 'Slide', 'add new on admin bar'),
-		'add_new'            => _x( 'Add New', 'Slide'),
-		'add_new_item'       => __( 'Name'),
-		'new_item'           => __( 'New Slide'),
-		'edit_item'          => __( 'Edit Slide'),
-		'view_item'          => __( 'View Slide'),
-		'all_items'          => __( 'All Slide'),
-		'featured_image'     => __( 'Featured Image', 'text_domain' ),
-		'search_items'       => __( 'Search Slide'),
-		'parent_item_colon'  => __( 'Parent Slide:'),
-		'not_found'          => __( 'No Slide found.'),
-		'not_found_in_trash' => __( 'No Slide found in Trash.'),
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'menu_icon'	     	 => 'dashicons-star-half',
-    	'description'        => __( 'Description.'),
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => true,
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => true,
-		'menu_position'      => null,
-		'supports'           => array('title','editor','thumbnail')
-	);
-
-	register_post_type( 'slider', $args );
-}
-
-
 /**
  * Register widget area.
  *
@@ -200,7 +156,7 @@ function fortisem_widgets_init() {
 add_action( 'widgets_init', 'fortisem_widgets_init' );
 
 /**
-// removes WP version from head and other junk links that slow down site goes in a themes functions.php
+* removes WP version from head and other junk links that slow down site goes in a themes functions.php
 */
 function headcleaner_setup () {
     remove_action('wp_head', 'wp_generator');                // #1
@@ -210,13 +166,26 @@ function headcleaner_setup () {
 
     remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);    // #5
 
-    add_filter('the_generator', '__return_false');            // #6
+    add_filter('the_generator', '__return_empty_string');            // #6
     add_filter('show_admin_bar','__return_false');            // #7
 
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );  // #8
-    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 }
 add_action('after_setup_theme', 'headcleaner_setup');
+
+// remove version from scripts and styles
+
+function shapeSpace_remove_version_scripts_styles($src) {
+	if (strpos($src, 'ver=')) {
+		$src = remove_query_arg('ver', $src);
+	}
+	return $src;
+}
+add_filter('style_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -224,7 +193,7 @@ add_action('after_setup_theme', 'headcleaner_setup');
 function fortisem_scripts() {
 	wp_enqueue_style( 'fortisem-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'fortisem-mainstyle', get_template_directory_uri() . '/dist/css/main.min.css' );
+	wp_enqueue_style( 'fortisem-mainstyle', get_template_directory_uri() . '/dist/css/main.css' );
 	
 	wp_enqueue_script('jquery');
 
@@ -236,6 +205,10 @@ function fortisem_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'fortisem_scripts' );
 
+/**
+ * Load functions to secure your WP install.
+ */
+require get_template_directory() . '/inc/custom-bootstrap-slider.php';
 
 /**
  * Load functions to secure your WP install.
@@ -273,44 +246,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
-* Social Sharing btn link
-*/
-function crunchify_social_sharing_buttons($content) {
-	global $post;
-	if(is_single()) {
+ * Load social sharing buttons.
+ */
+require get_template_directory() . '/inc/social-sharing.php';
 
-		// Get current page URL
-		$crunchifyURL = urlencode(get_permalink());
-
-		// Get current page title
-		$crunchifyTitle = str_replace( ' ', '%20', get_the_title());
-
-		// Get Post Thumbnail for pinterest
-		$crunchifyThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-
-		// Construct sharing URL without using any script
-		$twitterURL = 'https://twitter.com/intent/tweet?text='.$crunchifyTitle.'&amp;url='.$crunchifyURL.'&amp;via=Crunchify';
-		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$crunchifyURL;
-		$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$crunchifyURL.'&amp;title='.$crunchifyTitle;
-		$googleURL = 'https://plus.google.com/share?url='.$crunchifyURL;
-
-		// Based on popular demand added Pinterest too
-		// $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$crunchifyURL.'&amp;media='.$crunchifyThumbnail[0].'&amp;description='.$crunchifyTitle;
-
-		// Add sharing button at the end of page/page content
-		$content .= '<!-- Crunchify.com social sharing. Get your copy here: http://crunchify.me/1VIxAsz -->';
-		$content .= '<div class="crunchify-social">';
-		$content .= '<h5>PLEASE SHARE ON YOUR</h5> <a class="crunchify-link crunchify-twitter" href="'. $twitterURL .'" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>';
-		$content .= '<a class="crunchify-link crunchify-facebook" href="'.$facebookURL.'" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>';
-		$content .= '<a class="crunchify-link crunchify-linkedin" href="'.$linkedInURL.'" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>';
-		$content .= '<a class="crunchify-link crunchify-google-plus" href="'.$googleURL.'" target="_blank"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>';
-		// $content .= '<a class="crunchify-link crunchify-pinterest" href="'.$pinterestURL.'" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a>';
-		$content .= '</div>';
-
-		return $content;
-	}else{
-		// if not a post/page then don't include sharing button
-		return $content;
-	}
-};
-add_filter( 'the_content', 'crunchify_social_sharing_buttons');

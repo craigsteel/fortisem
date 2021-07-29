@@ -69,24 +69,31 @@
         position: absolute;
         top: 0;
         background: rgba($fortism-grey, 0.1);
+        display: flex;
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
         transition: $ease;
         z-index: 3;
           h1.title,
           h2.entry-title {   
-            margin: 90px 10px !important;
+            margin: 90px 10px !important;    
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
             a {
-            transition: $ease;
-            font-size: 25px;
-            color: $white;
-            text-transform: uppercase;
-            text-align: center;
-            text-decoration: none;
+              transition: $ease;
+              font-size: 25px;
+              color: #fff;
+              text-transform: uppercase;
+              text-decoration: none;
+              height: 0;
+              display: flex;
+              align-items: center;
               &:hover {
                 transition: $ease;
-                color: $background-color-jum;
+                color: $white;
                 font-size: 26px;
                 font-weight: 700;
               }

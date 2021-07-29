@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 get_header(); ?>

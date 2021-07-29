@@ -1,8 +1,8 @@
 <?php
 /**
- * FortisEM Theme Customizer
+ * fortisem Theme Customizer
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 /**
