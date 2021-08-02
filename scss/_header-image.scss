@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 350px!important;
+    height: 410px!important;
     z-index: -10;
     overflow: hidden;
 
@@ -12,12 +12,11 @@
       z-index: 0;
     }
   
-.page-title,
-.page-title-category,
-.container-fluid {
+.page-title {
     position: relative;
     margin: 2.5em;
     z-index: 999;
+    padding-top: 7em;
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
@@ -40,12 +39,12 @@
 }
 
  
-.archive-header,
-.page-title,
-.page-title-category,
-.container-fluid {
-    padding-top: 7%;
-  }
+// .archive-header,
+// .page-title,
+// .page-title-category,
+// .container-fluid {
+//     padding-top: 7%;
+//   }
 
 
 

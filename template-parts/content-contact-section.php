@@ -21,50 +21,37 @@ $phone_contact = get_field ('phone_contact');
 
 <section class="contact">  
   <div class="container"> 
-  	<div class="row">
-
-		<div class="col-md-4">
-			<div class="info-block text-center">
-
-				<div class="arrow-round"> <a href="#0">
-          		<div class="arrow"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-          		</a> </div>
-
-		          <h4><?php echo $main_title_address ?></h4>
-		          <address><?php echo $main_address ?>
-					</address>
-
-          	</div><!-- .col-md-3 -->
-         </div>
-
+  	
+		<div class="row">
 
 			<div class="col-md-4">
-			<div class="info-block text-center">
+				<div class="info-block text-center">
 
-				<div class="arrow-round"> <a href="#0">
-          		<div class="arrow"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-          		</a> </div>
+					<div class="arrow-round"> <a href="#0">
+						<div class="arrow"><i class="fa fa-map-marker" aria-hidden="true"></i>
+						</div></a> 
+					</div>
 
-		          <h4><?php echo $email_title ?></h4>
-		          <address><?php echo $email ?></br>
-					</address>
+					<h4><?php echo $main_title_address ?></h4>
+						<address><?php echo $main_address ?>
+						</address>
 
-          	</div><!-- .col-md-3 -->
-         </div>
+				</div><!-- .col-md-3 -->
+			</div>
 
-			<div class="col-md-4">
-			<div class="info-block text-center">
 
-				<div class="arrow-round"> <a href="#0">
-          		<div class="arrow"><i class="fa fa-phone" aria-hidden="true"></i></div>
-          		</a> </div>
+         <div class="col-md-8">
+					<div class="info-block-map">
 
-		          <h4><?php echo $phone_number_title ?></h4>
-		          <address><?php echo $phone_contact ?></br>
-					</address>
+						<a href=""><?php if( !empty($second_address_map) ) : ?>
+			
+						<img src="<?php echo $second_address_map['url']; ?>" alt="<?php echo $second_address_map['alt']; ?>">
+						</a>
+			
+						<?php endif; ?>
 
-          	</div><!-- .col-md-3 -->
-         </div>
+          </div><!-- .col-md-4 -->
+        </div>
 
 	</div><!-- .row -->
 
@@ -85,51 +72,19 @@ $phone_contact = get_field ('phone_contact');
          </div>
 
          <div class="col-md-8">
-			<div class="info-block-map">
-
-				<a href=""><?php if( !empty($second_address_map) ) : ?>
-			
-				<img src="<?php echo $second_address_map['url']; ?>" alt="<?php echo $second_address_map['alt']; ?>">
-				</a>
-			
-				<?php endif; ?>
-
-
-          	</div><!-- .col-md-4 -->
-         </div>
-
-		</div><!-- .row -->
-
-			<div class="row">
-
-				<div class="col-md-4">
-					<div class="info-block text-center">
-
-						<div class="arrow-round"> <a href="#0">
-		          		<div class="arrow"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-		          		</a> </div>
-
-				          <h4><?php echo $third_address_title ?></h4>
-				          <address><?php echo $third_address ?></br>
-							</address>
-
-		          	</div><!-- .col-md-4 -->
-		         </div>
-
-		         <div class="col-md-8">
 					<div class="info-block-map">
 
 						<a href=""><?php if( !empty($third_address_map) ) : ?>
 			
-				<img src="<?php echo $third_address_map['url']; ?>" alt="<?php echo $third_address_map['alt']; ?>">
-				</a>
+						<img src="<?php echo $third_address_map['url']; ?>" alt="<?php echo $third_address_map['alt']; ?>">
+						</a>
 			
-				<?php endif; ?>
+						<?php endif; ?>
 
-		          	</div><!-- .col-md-8 -->
-		         </div>
+          </div><!-- .col-md-4 -->
+        </div>
 
-		    </div><!-- .row -->
+		</div><!-- .row -->
 
-  	</div><!-- .container -->
+  </div><!-- .container -->
 </section> 

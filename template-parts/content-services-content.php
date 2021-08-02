@@ -43,14 +43,13 @@ $service_pdf_image_download = get_field ('service_pdf_image_download');
 				<?php endif; ?>
 				</div>
 					
-				<div class="pdf col-xs-4">
-					<?php 
+				<div class="pdf">
+					<?php
+						$file = get_field('service_pdf_image_download');
 
-$file = get_field('service_pdf_image_download');
-
-if( $file ): ?>	
-	<a href="<?php echo $service_pdf_image_download['url']; ?>"><?php echo $service_pdf_image_download['']; ?><?php echo $service_pdf_download_link ?></a>
-<?php endif; ?>
+						if( $file ): ?>	
+						<a href="<?php echo $service_pdf_image_download['url']; ?>"><?php echo $service_pdf_image_download['']; ?><?php echo $service_pdf_download_link ?></a>
+					<?php endif; ?>
 				</div>
 			</div><!-- .row -->
 		</div>

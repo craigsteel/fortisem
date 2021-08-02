@@ -56,7 +56,12 @@ background-repeat: no-repeat;
 	img {
 	display: block;
     margin: auto;
-    max-width: 100%;
+    max-width: 17%;
+
+		/* Extra Small Devices, Phones */ 
+		@media only screen and (max-width : 480px) {
+			max-width: 50%;
+		}
 	}
 }
 
@@ -76,6 +81,11 @@ background-repeat: no-repeat;
 		font-style: italic;
 		color: $grey;
 		padding: 0 100px;
+
+		/* Extra Small Devices, Phones */ 
+		@media only screen and (max-width : 480px) {
+			padding: 1em;
+		}
 	}
 }
 
