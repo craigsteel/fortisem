@@ -1,29 +1,31 @@
 .contact {
 
-      .info-block {
-      position: relative;
-      background-color: rgba($fortism-light-blue, .1);
-      margin-top: 60px;
-      padding: 10px;
-      height: 190px;
+  .info-block {
+    position: relative;
+    background-color: rgba($fortism-light-blue, .1);
+    margin-top: 60px;
+    padding: 10px;
+    height: 190px;
 
-        .arrow-round {
-          @include arrow-round;
-          top: -14px;
-            .fa {
-            font-size: 20px;
-            color: #fff;
-            padding: 0 7px;
-            }  
-          }
-          h4 {
-          padding-top: 20px;
-          text-align: center;
-          }
+    .arrow-round {
+      @include arrow-round;
+      top: -14px;
 
-          address {
-          color: $grey;
-          }
+      .fa {
+        font-size: 20px;
+        color: #fff;
+        padding: 0 7px;
+      }  
+    }
+    
+    h4 {
+      padding-top: 20px;
+      text-align: center;
+      }
+
+    address {
+      color: $grey;
+    }
   }
 
   .info-block-map {
@@ -34,10 +36,23 @@
     margin-left: 0;
     height: 190px;
     overflow: hidden;
+
+    /* Extra Small Devices, Phones */ 
+		@media only screen and (max-width : 480px) {
+      margin-top: 10px;
+      height: auto;
+		}
+
+    img {
+      // height: 100%;
+
+      /* Extra Small Devices, Phones */ 
+		  @media only screen and (max-width : 480px) {
+			  // height: 100%;
+        // margin-left: -40%;
+		  }
     }
-      img {
-      width: 100%
-      }
+  }
 }
 
 

@@ -15,7 +15,7 @@ $people_section_description = get_field ('people_section_description');
           </a> </div>
 
 			<h2 class="text-center"><?php echo $people_section_heading ?></h2>
-			   <p class="text-center"><?php echo $people_section_description ?></p>
+			   <p class="text-center our-people--intro"><?php echo $people_section_description ?></p>
 
 			   			<?php $loop = new WP_Query( array( 'post_type' => 'team_members', 'orderby'=>'post_id', 'order'=>'ASC' ) ); ?>
 
