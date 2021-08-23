@@ -132,5 +132,7 @@ $video_heading = get_field ('video_heading');
 </section><!-- .section -->
 
 <script> 
-$("#myModal").on('shown.bs.modal', function (e) {alert( "Modal is successfully shown!" );});
+$("#myModal").on('shown.bs.modal', function (e) {
+	alert( "Modal is successfully shown!" );
+});
 </script>
