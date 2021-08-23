@@ -1,0 +1,10 @@
+{
+    "projectManager.git.baseFolders": [
+      "fortisem"
+    ],
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "fortisem"
+    ]
+}
