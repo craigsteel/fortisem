@@ -49,7 +49,7 @@
   height: 100%;
   z-index: -1;
   background-color: #080d15;
-  opacity: .3;
+  opacity: .1;
 }
 
 @mixin read-more-btn {
@@ -84,3 +84,19 @@
   }
 }
 
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin font-size($size, $line: $size * 1.5, $space: 0) {
+  font-size: $size;
+  line-height: $line;
+  letter-spacing: $space;
+}

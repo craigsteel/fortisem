@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 // No direct access, please
@@ -37,7 +37,6 @@
     $bpr  =   3;  // number of column in each row
     while ( $the_query->have_posts() ) : $the_query->the_post();
   ?>
-
 
   <div class="container">
     <div class="row">

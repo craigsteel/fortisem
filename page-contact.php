@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FortisEM
+ * @package fortisem
  */
 
  // No direct access, please

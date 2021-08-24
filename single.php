@@ -4,15 +4,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/content','featured-image-posts'); ?>
-
-
-
+<?php get_template_part('template-parts/content','featured-image-pages'); ?>
 
 	<div class="row">
 		<div id="primary" class="content-area text-left col-md-8 col-md-offset-2">

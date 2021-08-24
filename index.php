@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FortisEM
+ * @package fortisem
  */
 
  // No direct access, please
@@ -20,7 +20,7 @@ get_header(); ?>
 <?php get_template_part('template-parts/content','display-index-featured'); ?>
 
 <?php get_template_part('template-parts/content','categories-list'); ?>
-
+<h1>This Page archive</h1>
 <div class="projects-page">
 <div class="container">
 	<div class="row">

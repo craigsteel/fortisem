@@ -8,7 +8,11 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 
 const SCRIPTS_PATH = 'js/**/*.js';
+<<<<<<< HEAD
 const DIST_PATH = 'dist';
+=======
+const DIST_PATH = 'dist/js';
+>>>>>>> d43664848778fac873d11a5a235359460d4c7a33
 
 // Scripts
 function scriptsFn() {

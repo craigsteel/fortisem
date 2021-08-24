@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package FortisEM
+ * @package fortisem
  */
 
 if ( ! function_exists( 'fortisem_posted_on' ) ) :

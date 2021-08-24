@@ -4,44 +4,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FortisEM
+ * @package fortisem
  */
  // No direct access, please
  if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+ ?>
 
-
-// grab the URL for the category image
-
-if (function_exists('category_image_src')) {
-	$category_image = category_image_src( array( 'size' => 'full' ) , false ); 
-} else {
-	$category_image = '';
-}
-
-get_header(); ?>
-
-			<!-- add a class to the header if a category image exists -->
-			<section class="archive-header" <?php if ($category_image==true) echo 'category-image'; ?>">
-	
-				<?php if ($category_image) : ?>
-				
-				<!-- category featured image -->
-				<div class="feature-image" style="background-image:url(<?php echo $category_image; ?>);" data-type="background" alt="<?php single_cat_title();?>" desc="<?php echo wp_strip_all_tags( category_description() );?>">		
-				
-				<?php endif; ?>
-
-	<div class="overlay"></div>
-
-		<div class="page-title">
-			<div class="container-fluid">
-				<?php the_archive_description( '<h1 class="text-center">', '</h1>' ); ?>
-			</div>
-		</div>		
-</section>
-
-
-
-<?php get_template_part('template-parts/content','categories-list'); ?>
+<?php get_template_part('template-parts/content','featured-image-archive'); ?>
 
 <div class="News-page">
 	<div class="container">
